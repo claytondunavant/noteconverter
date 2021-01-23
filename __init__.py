@@ -1,9 +1,11 @@
 from flask import Flask, render_template
+import flaskFileService
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+	flaskFileService.get_files('get-files')
 	return render_template('home.html')
 '''
 @app.route('/upload/')
