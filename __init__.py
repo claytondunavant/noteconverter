@@ -2,6 +2,8 @@ from flask import Flask, render_template
 import flaskFileService
 import slides2notes
 
+test = slides2notes.Slides2Notes(1, "test", "test")
+
 app = Flask(__name__)
 
 @app.route('/')
