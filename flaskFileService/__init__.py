@@ -1,18 +1,8 @@
 from flask import Flask, render_template, send_file, send_from_directory
-import flaskFileService
 
 app = Flask(__name__)
 
 DOWNLOAD_DIRECTORY = "get-files"
-
-@app.route('/')
-def home():
-	# flaskFileService.get_files('get-files')
-	return render_template('home.html')
-
-@app.route('/download/')
-def download():
-	return render_template('download.html')
 
 @app.route('/get-files/<path:path>', methods = ['GET', 'POST'])
 def get_files(path):
@@ -21,10 +11,7 @@ def get_files(path):
     except FileNotFoundError:
         return False
 
-'''
-@app.route('/upload/')
-def upload():
-	return render_template('upload.html')'''
+app.run(debug = True)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(host='0.0.0.0', port = 8000, threaded = True, debug = True)
