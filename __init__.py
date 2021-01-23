@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import flaskFileService
+from flaskFileService import flaskFileService
 
 app = Flask(__name__)
 
