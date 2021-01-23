@@ -22,6 +22,7 @@ h1 {
     display: inline-flex; 
     float: right;
     margin: 50px; 
+    list-style: none;
 }
 
 .menubar ul li {
@@ -37,4 +38,8 @@ h1 {
     float: left; 
     color: grey; 
     padding-top: 100 px;
+}
+
+.uploadBtn {
+    list-style: none;
 }
