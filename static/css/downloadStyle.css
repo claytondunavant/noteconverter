@@ -5,8 +5,23 @@
     background: rgb(54, 12, 66); 
 }
 
-.render {
-  list-style: none;
+.btns {
+  vertical-align: middle;
+    display: list-item;
+    position: fixed;
+    top: 50px;
+    left: 35%;
+}
+
+
+
+.btns li {
+   background: grey;
+   background-position-x:center; 
+   background-position-y: center;
+   background-size: 20%;
+   top: 50px;
+    left: 35%;
 }
 
 .downloadWelcome {
