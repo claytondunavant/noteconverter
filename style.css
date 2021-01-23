@@ -10,13 +10,13 @@
     height: 100%; 
 }
 
-/*
+
 h1 {
     color:white; 
-    border: solid; 
-    border-color: wheat;
+    /*border: solid; 
+    border-color: wheat; */
 
-} */ 
+} 
 
 .menubar ul{
     display: inline-flex; 
@@ -26,8 +26,15 @@ h1 {
 
 .menubar ul li {
     list-style: none; 
+    font-size: 50 px;
     margin: 0 20px; 
     color: grey; 
     cursor: pointer; 
     
+}
+
+.logo {
+    float: left; 
+    color: grey; 
+    padding-top: 100 px;
 }
