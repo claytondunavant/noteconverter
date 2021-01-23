@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from flaskFileService import flaskFileService
+import flaskFileService
+import slides2notes
 
 app = Flask(__name__)
 
