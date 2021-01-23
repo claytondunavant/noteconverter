@@ -1,23 +1,57 @@
 <html>
 <head>
+<<<<<<< HEAD:noteconverter/templates/home.html
+    <title> Hoe can't take notes? </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="websiteWelcome"> AYO LOOK AT OUR WEBSITE </h1>
+
+
+=======
     <title>This is a proper title.</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1> AYO LOOK AT OUR WEBSITE!! </h1>
 </body>
+>>>>>>> e1f479ac6eb2b81ebe788c3bb39227d112345c84:templates/home.html
     <h4 class="logo">*logo*</h4>
-    <div class="menubar">
-        <ul>
-            <li>About</li>
-            <li> | </li>
-            <li>Contact</li>
-        </ul>
-    </div> 
 
-    <div>
-        <button class="uploadBtn">UPLOAD</button>
-    </div>
+    <!--
+        unorderd list, rendered vertically. first element is the menu bar, floating right
+        second element is the huge button, centered
+    -->
+
+    <ul class="render">
+        <li>
+            <div class="menubar">
+                <ul>
+                    <li>About</li>
+                    <li> | </li>
+                    <li>Contact</li>
+                    
+                </ul>
+                
+            </div> 
+        </li>
+
+
+
+        <li>
+            <div class="centerBtn">
+                <button class="grow">UPLOAD PDF</button>
+            </div>
+        </li>
+    </ul>
+
+
+
+
+
+    
+    
+</body>
     
        
 </html>
