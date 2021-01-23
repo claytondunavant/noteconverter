@@ -1,6 +1,6 @@
 # noteconverter
 
-slides2notes.com
+https://www.slides2notes.com
 
 https://pythonhow.com/add-css-to-flask-website/
 
