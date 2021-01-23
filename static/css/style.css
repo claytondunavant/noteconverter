@@ -1,6 +1,61 @@
 *{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Courier New', monospace;    
+    background: rgb(54, 12, 66); 
+}
 
-    font-family: sans-serif; 
+.btns button {
+  vertical-align: middle;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background: #578ead;
+    color: #ffffff;
+    width: 30%;
+    height: 30%;
+    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btns li {
+   text-align: center;
+   display: list-item;
+   margin-top: 10%;
+   position: relative;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+    text-decoration: none;
+}
+.grow:hover { transform: scale(1.1); }
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+.websiteWelcome {
+    color:white; 
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+} 
     background: rgb(54, 12, 66); 
 }
 
@@ -34,7 +89,6 @@
     color:  #0053ba;
 }
 
-
 .menubar ul li {
     font-size: 40px;
     margin: 30px; 
@@ -55,14 +109,17 @@
     position: fixed;
     top: 250px;
     left: 35%;
+}
 
+.bla a {
+    background: #578ead;
 }
 
 .grow { 
     transition: all .2s ease-in-out; 
+    text-decoration: none;
 }
-.grow:hover { transform: scale(2.1); }
-
+.grow:hover { transform: scale(1.1); }
 
 button {
     border: none;
@@ -73,13 +130,13 @@ button {
     width: 30%;
     height: 30%;
     
+    text-decoration: none;
     font-family: sans-serif;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
     transition: background 300ms ease-in-out, 
-                transform 150ms ease;
-   
+                transform 150ms ease; 
 }
 
 button:hover,
@@ -100,8 +157,7 @@ button:active {
     height: 100px;
     list-style-type: none;
     margin: 10px;
-    vertical-align: middle;
-        
+    vertical-align: middle;      
 }
 
 .render ul li {
