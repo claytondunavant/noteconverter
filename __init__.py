@@ -12,19 +12,15 @@ DOWNLOAD_DIRECTORY = "get-files"
 
 @app.route('/')
 def home():
-	# flaskFileService.get_files('get-files')
 	return render_template('home.html')
 
-@app.route('/download/')
-def download():
-	return render_template('home.html')
-
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/', methods = ['POST'])
 def uploadFiles():
-	if request.method == 'POST':
-		f = request.files['file']
-		f.save(secure_filename(f.filename))
-		return 'file uploaded successfully'
+	uploadedFile = request.files['file']
+	if uploadedFile.filename != '':
+		uploadedFile.save(uploadedFile.filename)
+	return redirect(url_for('home'))
+	
 
 @app.route('/get-files/<path:path>', methods = ['GET', 'POST'])
 def get_files(path):
@@ -32,8 +28,6 @@ def get_files(path):
         return send_from_directory(DOWNLOAD_DIRECTORY, path, as_attachment=True)
     except FileNotFoundError:
         return False
-	
-	return render_template(download.html)
 
 '''
 @app.route('/upload/')
