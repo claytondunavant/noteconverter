@@ -19,8 +19,6 @@
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-  
-  
 }
 
 .btns li {
@@ -41,13 +39,11 @@ button:focus {
     background: #0053ba;
 }
 
-
 .websiteWelcome {
     color:white; 
     animation-duration: 3s;
     animation-name: slidein;
 }
-
 
 @keyframes slidein {
     from {
@@ -93,7 +89,6 @@ button:focus {
     color:  #0053ba;
 }
 
-
 .menubar ul li {
     font-size: 40px;
     margin: 30px; 
@@ -114,8 +109,6 @@ button:focus {
     position: fixed;
     top: 250px;
     left: 35%;
-    
-
 }
 
 .bla a {
@@ -127,7 +120,6 @@ button:focus {
     text-decoration: none;
 }
 .grow:hover { transform: scale(1.1); }
-
 
 button {
     border: none;
@@ -144,8 +136,7 @@ button {
     cursor: pointer;
     text-align: center;
     transition: background 300ms ease-in-out, 
-                transform 150ms ease;
-   
+                transform 150ms ease; 
 }
 
 button:hover,
@@ -166,8 +157,7 @@ button:active {
     height: 100px;
     list-style-type: none;
     margin: 10px;
-    vertical-align: middle;
-        
+    vertical-align: middle;      
 }
 
 .render ul li {
