@@ -42,7 +42,7 @@ button:focus {
 }
 
 
-.downloadWelcome {
+.websiteWelcome {
     color:white; 
     animation-duration: 3s;
     animation-name: slidein;
