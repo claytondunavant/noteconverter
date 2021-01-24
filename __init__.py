@@ -1,8 +1,7 @@
-from flask import Flask, render_template, send_file, send_from_directory, flash, request, redirect, url_for
+from flask import *
 import flaskFileService
 import os
 from werkzeug.utils import secure_filename
-import slides2notes
 
 UPLOAD_FOLDER = "/get-files/<path:path>"
 ALLOWED_EXTENSIONS = {"pdf"}
@@ -32,18 +31,10 @@ def get_files(path):
 
 @app.route('/upload', methods=["GET","POST"])
 def upload():
-
-	if request.method == "POST":
-
-		if request.files:
-
-			uploadedFile = request.files["pdf"]
-
-			s2n = slides2notes.Slides2Notes(1,uploadedFile,"docx")
-
-			return redirect(request.url)
-
-	return render_template('upload.html')
+	if request.method == 'POST':
+		f = request.files['file']
+		f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
+		return render_template('download.html')
 
 if __name__ == '__main__':
 	app.run()
