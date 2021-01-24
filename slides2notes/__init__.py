@@ -1,4 +1,4 @@
-from pdf2image import convert_from_path
+from pdf2image import convert_from_bytes
 from os import system
 from os import path
 from docx import Document
@@ -14,7 +14,7 @@ class Slides2Notes:
         imgsDir = self.processID + "/imgs"
         system("mkdir " + imgsDir)
 
-        images = convert_from_path(self.inputFile)
+        images = convert_from_bytes(self.inputFile)
 
         for image in images:
             image.save(imgsDir + "/slide" + str(self.numSlides) + ".jpg", 'JPEG')
@@ -57,7 +57,7 @@ class Slides2Notes:
     def __init__(self, processID, inputFile, outputType):
         self.processID = str(processID)
         self.inputFile = inputFile
-        self.inputFileName = path.splitext(path.basename(inputFile))[0]
+        self.inputFileName = path.splitext(inputFile.filename)[0]
         self.outputType = outputType
         self.run()
 
